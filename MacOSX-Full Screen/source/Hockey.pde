@@ -108,13 +108,13 @@ void draw() {
     y = height/2;
   }
     if(x>width-25 && y>(height/2)-50 && y<(height/2)+50) {
-    rs++;
+    bs++;
     x = width/2;
     y = height/2;
     text( rds,width/2-100, 50 );
     }
         if(x<25 && y>(height/2)-50 && y<(height/2)+50) {
-    bs++;
+    rs++;
     x = width/2;
     y = height/2;
     text( bds,width/2-100, 50 );
