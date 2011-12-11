@@ -22,14 +22,17 @@ String rds = "SCORE --->";
 String bds = "<--- SCORE";
 boolean Blue = false;
 int BlueC;
-
+PImage table;
 
 void setup() {
   size(640, 480);
   smooth();
   font = loadFont( "Score.vlw" );
   textFont( font );
+table = loadImage("table.svg.tif");
 }
+
+
 void draw() {
   
   x1 = mouseX;
@@ -153,8 +156,10 @@ void button() {
   println(rx + " " + ry);
 
 }
-void table(){
 
+void table(){
+  background(255);
+/*
 for(int o=0; o<700; o+=15) {
   for(int i=0; i<700; i+=15) {
     strokeWeight(2);
@@ -177,8 +182,10 @@ for(int o=0; o<700; o+=15) {
   rect(-75, height/2-50, 100, 100);
   ellipse(width/2, height/2, 50, 50);
   
-
+*/
+image(table, 0, 0, width, height);
 }
+
 void mousePressed() {
     if ( y>=ry-50 && y<=(ry+50) && x>=(rx-50) && x<=rx+50 && xspeed>0) {
     yspeed = random(-25) - 50;
